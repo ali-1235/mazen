@@ -29,7 +29,7 @@ class values17(models.Model):
 
     
     title = fields.Char(string='title',default=' ')
-    text =  fields.Html(string='text',default='')
+    text =  fields.Char(string='text',default='')
 
 
 
@@ -38,7 +38,7 @@ class Partner17(models.Model):
     _inherit = 'res.partner'
 
     image_url= fields.Char(string='image url',compute='_compute_image_url')
-    category_ids = fields.Many2many('category' , string='category_ids')
+    # category_ids = fields.Many2many('category' , string='category_ids')
 
     @api.depends('image_1920')
     def _compute_image_url(self):
@@ -63,7 +63,7 @@ class AboutUS17(models.Model):
     subTitle = fields.Char(string='subTitle', default=' ')
     text =  fields.Html(string='text',default='')
     value = fields.Char(string='value', default=' ')
-    description = fields.Html(string='description',default='')
+    description = fields.Char(string='description',default='')
 
     @api.depends('image')
     def _compute_image_url(self):

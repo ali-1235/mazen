@@ -19,7 +19,7 @@ class LeaderShipLines(models.Model):
     image_url = fields.Char(string='image url',compute='_compute_image_url')
     name = fields.Char(string='name',default='')
     title = fields.Char(string='title',default='')
-    description = fields.Html(string='description',default='')
+    description = fields.Char(string='description',default='')
 
 
 

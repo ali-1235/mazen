@@ -16,21 +16,22 @@ class LeaderShip(http.Controller):
             check_str=lambda x:x if x else ''
             for item in leader_ship_obj:
                 result.append({
-                    'leaderShip':check_list([{'hero':check_list([{ 'image':check_str(hero.image_url),
+                    # 'leaderShip':check_list([
+                        'hero':check_list([{ 'image':check_str(hero.image_url),
                                                                     'title':check_str(hero.title)
-                                                                    } for hero in leader.hero_id]),
-                                            'leaderShipList':[{'image':check_str(line.image_url),
-                                                                'name':check_str(line.title),
-                                                                'title':check_str(line.title),
-                                                                'description':check_str(line.description)
-                                                                } for line in leader.leadership_ids]} 
-                                            for leader in leader_ship_obj])
+                                                                    } for hero in leader_ship_obj.hero_id]),
+                        'leaderShipList':[{'image':check_str(line.image_url),
+                                            'name':check_str(line.name),
+                                            'title':check_str(line.title),
+                                            'description':check_str(line.description)
+                                            } for line in leader_ship_obj.leadership_ids]
+                                            # for leader in leader_ship_obj])
                             })
             if result:
                 result=result[0]
             else:
                 result={}    
-            response = json.dumps({"data":result,'message' : 'leaderShip'}) 
+            response = json.dumps({"leaderShip":result,'message' : 'leaderShip'}) 
             return Response(
                 response, status=200,
                 headers=[('Content-Type', 'application/json'), ('Content-Length', 100)])    

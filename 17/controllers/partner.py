@@ -18,16 +18,18 @@ class Partner(http.Controller):
             get_cat=lambda x:x.display_name if x else ''
             for item in hero_obj:
                 result.append({
-                    'partners':check_list([{'hero':{'image':check_str(item.image_url),'title':check_str(item.title),'subTitle':check_str(item.subTitle)},
-                    'partnerList':[{'image':partner.image_url,'category':get_cat(check_list([cat for cat in partner.category_id]))} for partner in partner_obj]}
-                    ])
+                    # 'partners':check_list([{
+                        'hero':{'image':check_str(item.image_url),'title':check_str(item.title),'subTitle':check_str(item.subTitle)},
+                    'partnerList':[{'image':partner.image_url,'category':get_cat(check_list([cat for cat in partner.category_id]))} for partner in partner_obj]
+                    # }
+                    # ])
                 })
                 
             if result:
                 result=result[0]
             else:
                 result={}    
-            response = json.dumps({"data":result,'message' : 'Partner'}) 
+            response = json.dumps({"partners":result,'message' : 'Partner'}) 
             return Response(
                 response, status=200,
                 headers=[('Content-Type', 'application/json'), ('Content-Length', 100)])    

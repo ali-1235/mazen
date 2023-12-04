@@ -15,7 +15,6 @@ class AboutUs(http.Controller):
             check_str=lambda x:x if x else ""
             for item in aboutus_obj:
                 result.append({
-                    'aboutUs':[{
                         'hero':check_list([{'image':check_str(hero.image_url),
                                             'title':check_str(hero.title)} for hero in aboutus_obj.hero_id]),
                         
@@ -31,13 +30,12 @@ class AboutUs(http.Controller):
                         'brand':check_list([{'image':check_str(brand.image_url),
                                 'description':{'title':check_str(brand.name),'text':check_str(brand.comment)}
                         } for brand in aboutus_obj.brand_id])
-                    }]
                 })
             if result:
                 result=result[0]
             else:
                 result={}    
-            response = json.dumps({"data":result,'message' : 'about us'}) 
+            response = json.dumps({"aboutUs":result,'message' : 'about us'}) 
             return Response(
                 response, status=200,
                 headers=[('Content-Type', 'application/json'), ('Content-Length', 100)])    

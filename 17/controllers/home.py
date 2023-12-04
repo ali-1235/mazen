@@ -16,19 +16,17 @@ class Home(http.Controller):
             check_str = lambda x:x if x else ''
             for item in home_obj:
                 result.append({
-                    'home':check_list([{
                             'hero':[{
                                 'title':check_str(hero.title),
                                 'subTitle':check_str(hero.subTitle),
                                 'image':check_str(hero.image_url)
                             } for hero in home_obj.hero_ids]
-                        }])
                 })
             if result:
                 result=result[0]
             else:
                 result={}    
-            response = json.dumps({"data":result,'message' : 'home'}) 
+            response = json.dumps({"home":result,'message' : 'home'}) 
             return Response(
                 response, status=200,
                 headers=[('Content-Type', 'application/json'), ('Content-Length', 100)])    
