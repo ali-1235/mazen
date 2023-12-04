@@ -18,11 +18,10 @@ class Partner(http.Controller):
             get_cat=lambda x:x.display_name if x else ''
             for item in hero_obj:
                 result.append({
-                    # 'partners':check_list([{
-                        'hero':{'image':check_str(item.image_url),'title':check_str(item.title),'subTitle':check_str(item.subTitle)},
+                   
+                    'hero':{'image':check_str(item.image_url),'title':check_str(item.title),'subTitle':check_str(item.subTitle)},
                     'partnerList':[{'image':partner.image_url,'category':get_cat(check_list([cat for cat in partner.category_id]))} for partner in partner_obj]
-                    # }
-                    # ])
+                    
                 })
                 
             if result:
