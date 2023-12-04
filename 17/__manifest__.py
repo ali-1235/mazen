@@ -22,7 +22,7 @@
             'views/home.xml',
             'views/leaderShip.xml',
             'data/about_us.xml',
-        #     'views/category.xml'
+            'views/contact_us.xml'
             
             
     ],
