@@ -1,0 +1,70 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="about_us_form_view">
+            <field name="name">about us new List</field>
+            <field name="model">about.us</field>
+            <field name="arch" type="xml">
+                <tree  create="false">
+                    <field name="title"/>
+                    <field name="subTitle"/>
+                    <field name="value"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+        <record id="about_us_form_view" model="ir.ui.view">
+            <field name="name">about us new form</field>
+            <field name="model">about.us</field>
+            <field name="arch" type="xml">
+                <form string="about us new" >
+                    <sheet>
+                        <group>
+                            <field name="hero_id"/>
+                            <field name="brand_id"/>
+                            
+                        </group>
+
+                        <group>
+                            <field name="title"/>
+                            <field name="subTitle"/>
+                        </group>
+                        <group>
+                            <field name="text"/>
+                            <field name="value"/>
+                            <field name="description"/>
+                        </group>
+                        <group>
+                        <field name='image'/>
+                        <field name='image_url'/>
+                        <field name="values_ids"/>
+                        
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="about_us_action_window">
+            <field name="name">about us new</field>
+            <field name="res_model">about.us</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                    <p class="o_view_nocontent_smiling_face">
+                        Create your first about us Record!
+                    </p>
+            </field>
+        </record>
+
+        <menuitem id="17_root" name="17" sequence="9"/>
+        <menuitem id="about" name="About" sequence="100" parent="17_root" />
+        <menuitem id="about_us" name="About Us" sequence="113" parent="about"
+            action="about_us_action_window" />
+        
+
+    </data>
+</odoo>

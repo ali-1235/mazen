@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data noupdate="1">
+    <record id="about_us_data" model="about.us">
+        <field name="title">default title</field>
+    </record>
+</data>

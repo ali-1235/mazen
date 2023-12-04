@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+id_hero,name_hero,model_hero,,1,1,1,1
+id_values,name_values,model_values,,1,1,1,1
+id_about_us,name_about_us,model_about_us,,1,1,1,1
+id_home,name_home,model_home,,1,1,1,1
+id_leader_ship,name_leader_ship,model_leader_ship,,1,1,1,1
+id_leader_sheip_line,name_leader_sheip_line,model_leader_sheip_line,,1,1,1,1
+
+
+

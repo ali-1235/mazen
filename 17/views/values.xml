@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="values_list_view">
+            <field name="name">values new List</field>
+            <field name="model">values</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="title"/>
+                    <field name="text"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+        <record id="values_form_view" model="ir.ui.view">
+            <field name="name">values new form</field>
+            <field name="model">values</field>
+            <field name="arch" type="xml">
+                <form string="hero new">
+                    <sheet>
+                        <group>
+                            <field name="title"/>
+                            <field name="text"/>
+                            
+                        </group>
+
+                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="values_action_window">
+            <field name="name">values new</field>
+            <field name="res_model">values</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                    <p class="o_view_nocontent_smiling_face">
+                        Create your first values Record!
+                    </p>
+            </field>
+        </record>
+
+    
+        <menuitem id="values" name="Values" sequence="115" parent="about"
+            action="values_action_window" />
+        
+
+    </data>
+</odoo>
