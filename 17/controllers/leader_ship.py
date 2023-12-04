@@ -16,7 +16,7 @@ class LeaderShip(http.Controller):
             check_str=lambda x:x if x else ''
             for item in leader_ship_obj:
                 result.append({
-                    # 'leaderShip':check_list([
+                    
                         'hero':check_list([{ 'image':check_str(hero.image_url),
                                                                     'title':check_str(hero.title)
                                                                     } for hero in leader_ship_obj.hero_id]),
@@ -25,7 +25,7 @@ class LeaderShip(http.Controller):
                                             'title':check_str(line.title),
                                             'description':check_str(line.description)
                                             } for line in leader_ship_obj.leadership_ids]
-                                            # for leader in leader_ship_obj])
+                                           
                             })
             if result:
                 result=result[0]
