@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hero_list_view">
+            <field name="name">hero new List</field>
+            <field name="model">hero</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="title"/>
+                    <field name="subTitle"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+        <record id="hero_form_view" model="ir.ui.view">
+            <field name="name">hero new form</field>
+            <field name="model">hero</field>
+            <field name="arch" type="xml">
+                <form string="hero new">
+                    <sheet>
+                        <group>
+                            <field name="image"/>
+                            <field name="image_url"/>
+                            
+                        </group>
+
+                        <group>
+                            <field name="title"/>
+                            <field name="subTitle"/>
+                        </group>
+                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="hero_action_window">
+            <field name="name">about_us new</field>
+            <field name="res_model">hero</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                    <p class="o_view_nocontent_smiling_face">
+                        Create your first hero Record!
+                    </p>
+            </field>
+        </record>
+
+    
+        <menuitem id="hero" name="Hero" sequence="114" parent="about"
+            action="hero_action_window" />
+        
+
+    </data>
+</odoo>
