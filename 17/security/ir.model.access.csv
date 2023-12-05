@@ -6,5 +6,11 @@ id_home,name_home,model_home,,1,1,1,1
 id_leader_ship,name_leader_ship,model_leader_ship,,1,1,1,1
 id_leader_sheip_line,name_leader_sheip_line,model_leader_sheip_line,,1,1,1,1
 id_contact_us,name_contact_us,model_contact_us,,1,1,1,1
-
+id_blog,name_blog,model_blog,,1,1,1,1
+id_case_study,name_case_study,model_case_study,,1,1,1,1
+id_business_item,name_business_item,model_business_item,,1,1,1,1
+id_solution_item,name_solution_item,model_solution_item,,1,1,1,1
+id_outcome_item,name_outcome_item,model_outcome_item,,1,1,1,1
+id_news,name_news,model_news,,1,1,1,1
+id_news_line_detailed,name_news_line_detailed,model_news_line_detailed,,1,1,1,1
 

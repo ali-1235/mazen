@@ -43,7 +43,6 @@
                             <field name="area_of_interest"/>
                         </group>
                         <group>
-                            <field name="message"/>
                         
                         </group>
                         <group>

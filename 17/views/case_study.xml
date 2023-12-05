@@ -1,0 +1,71 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="case_study_list_view">
+            <field name="name">case study new List</field>
+            <field name="model">case.study</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="title"/>
+                    <field name="description"/>
+                    <field name="slug"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+        <record id="case_study_form_view" model="ir.ui.view">
+            <field name="name">case_study new form</field>
+            <field name="model">case.study</field>
+            <field name="arch" type="xml">
+                <form string="case study new">
+                    <sheet>
+                        <group>
+                            <field name="title"/>
+                            <field name="description"/>
+                            <field name="slug"/>
+                            
+                        </group>
+
+                        <group>
+                            <field name="industyr"/>
+                            <field name="aboutTheCompany"/>
+                        </group>
+                        <group>
+                            <field name="businessChallanges_items"/>
+                        </group>
+                        <group>
+                            <field name="solution_items"/>
+                        </group>
+                        
+                        <group>
+                            <field name="outcome_items"/>
+                        </group>
+                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="case_study_action_window">
+            <field name="name">case study new</field>
+            <field name="res_model">case.study</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                    <p class="o_view_nocontent_smiling_face">
+                        Create your first case study Record!
+                    </p>
+            </field>
+        </record>
+
+        
+        
+        <menuitem id="case_study" name="CaseStudy" sequence="2" parent="blog_and_news"
+            action="case_study_action_window" />
+        
+        
+
+    </data>
+</odoo>
